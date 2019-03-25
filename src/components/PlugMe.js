@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 class PlugMe extends React.Component {
+
     constructor(props) {
         super(props);
         this.state = {
@@ -11,7 +12,7 @@ class PlugMe extends React.Component {
             currentStanding: 4
         };
         /**
-         * This is manual binding incase we want to define a function like this  >>> handlePoints () {}
+         * This is manual binding in-case we want to define a function like this  >>> handlePoints () {}
          */
 
         // this.handlePoints = this.handlePoints.bind(this)
