@@ -5,11 +5,13 @@ class PlugMe extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            points: 0,
-            club:"Man United",
-            color: "red",
-            gamesPlayed: 25,
-            currentStanding: 4
+            club : {
+                points: 0,
+                name:"Man United",
+                color: "red",
+                gamesPlayed: 25,
+                currentStanding: 4
+            }
         };
         /**
          * This is manual binding in-case we want to define a function like this  >>> handlePoints () {}
@@ -18,16 +20,22 @@ class PlugMe extends React.Component {
         // this.handlePoints = this.handlePoints.bind(this)
     }
     handlePoints=()=>{
-        this.setState({points : 150});
-    }
+        this.setState({
+                                club: {points : 150}
+                            }
+                     );
+    };
+    // handlePoints(){
+    //
+    // }
     static getDerivedStateFromProps(props, state) {
         /**
          * Enable this to see the state being changed and also dont use setState Method by react
          * Note: this is a life cycle method that will be called on component mounting and will return state
          */
-        return {
-            points: 57
-        }
+        // return {
+        //     club : {points: 57}
+        // }
 
         //TODO : Implement this in a way where you will not affect the rest of the state values
     }
@@ -37,7 +45,7 @@ class PlugMe extends React.Component {
         return (
             <div>
                 <h1> Plugged In </h1>
-                <p>Club Points {this.state.points} </p>
+                <p>Club Points {this.state.club.points} </p>
                 <div>
                     <button onClick={this.handlePoints}> Change Points</button>
                 </div>
