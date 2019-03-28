@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-
-class PlugMe extends React.Component {
+class PlugMe extends Component {
 
     constructor(props) {
         super(props);
@@ -24,7 +23,8 @@ class PlugMe extends React.Component {
                                 club: {points : 150}
                             }
                      );
-    };
+    }
+
     // handlePoints(){
     //
     // }
@@ -33,9 +33,9 @@ class PlugMe extends React.Component {
          * Enable this to see the state being changed and also dont use setState Method by react
          * Note: this is a life cycle method that will be called on component mounting and will return state
          */
-        // return {
-        //     club : {points: 57}
-        // }
+        return {
+            club : {points: 57}
+        }
 
         //TODO : Implement this in a way where you will not affect the rest of the state values
     }
