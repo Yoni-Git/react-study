@@ -15,7 +15,7 @@ class App extends Component {
         onclickHandle =()=>{
 
                let self = this;
-               let headers=[]
+               let headers=[];
             axios.get('https://reqres.in/api/users/?page='+ self.state.page)
                 .then(function (response) {
                     // handle success
@@ -45,9 +45,8 @@ class App extends Component {
                 });
         }
     nextHandle=()=>{
-            let pageNum=this.state.page + 1
-            this.setState({page:pageNum})
-          this.onclickHandle();
+            this.setState({page:this.state.page + 1} ,  this.onclickHandle);
+
     }
 
   render() {
