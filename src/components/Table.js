@@ -1,9 +1,8 @@
 import  React ,{Component} from 'react'
 
 class Table extends Component{
-    getHeader(){
 
-    }
+
     render(){
         return(
             <div>
