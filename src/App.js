@@ -1,17 +1,12 @@
 import React, { Component } from 'react';
 import './App.css';
-import PlugMe from './components/PlugMe'
-
+import Local_Table from './components/MaterialUI/Local_Table';
 class App extends Component {
-    person  = {
-            name  : "",
-            age : "",
-            gender : ""
-        }
+
   render() {
     return (
         <div className="App">
-          <PlugMe  person={this.person}/>
+          <Local_Table  />
         </div>
     );
   }
