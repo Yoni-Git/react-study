@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import PlugMe from './components/PlugMe'
-import Test from './components/matrialUi/Test'
+
 class App extends Component {
     person  = {
             name  : "",
@@ -11,8 +11,7 @@ class App extends Component {
   render() {
     return (
         <div className="App">
-          {/*<PlugMe  person={this.person}/>*/}
-          <Test/>
+          <PlugMe  person={this.person}/>
         </div>
     );
   }
